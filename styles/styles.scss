@@ -1,7 +1,9 @@
+$grey: rgba(200, 200, 200, 0.8);
+$purple: #6c7ae0;
 // vars
 $shadow: 0 5px 10px rgba(0, 0, 0, 0.26);
-$blue: #21d4fd;
-$purple: #b721ff;
+$border-radius: 5px;
+$border-values: 1px solid $grey;
 
 // utils
 .flex {
@@ -95,7 +97,7 @@ ul {
 }
 
 .wrap-container {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  box-shadow: $shadow;
   border-radius: 5px;
 }
 @media (min-width: 700px) {
@@ -162,12 +164,11 @@ header .header {
   .top-nav__item {
     flex: 1;
     text-align: center;
-    color: #616161;
-    font-size: calc(0.2rem + 1vw);
+    color: #458;
+    font-size: calc(0.2rem + 2vw);
     font-style: bold;
     padding: 1.5rem 0;
     text-decoration: none;
-    // border: solid 1px rgba(200, 200, 200, 0.8);
 
     &:hover {
       text-decoration: underline;
@@ -206,7 +207,7 @@ header .header {
 
   .top-news__header {
     justify-content: space-between;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid $grey;
     font-weight: 300;
     line-height: 24px;
     font-size: calc(1rem + 0.7vw);
@@ -220,7 +221,7 @@ header .header {
   .top-news__list {
     font-size: calc(1rem + 0.4vw);
     .top-news__item {
-      border-bottom: 1px solid #e0e0e0;
+      border-bottom: 1px solid $grey;
       padding: 1em 0;
       line-height: 19.2px;
       text-decoration: none;
@@ -253,7 +254,7 @@ header .header {
 
     .table-header {
       color: white;
-      background-color: #6c7ae0;
+      background-color: $purple;
       th {
         font-weight: 100;
         line-height: 24px;
@@ -274,6 +275,12 @@ header .header {
  ** 6. Wheater
  */
 .weather {
+    padding: 1rem;
+    margin: 2rem;
+    box-shadow: $shadow;
+    border-radius: $border-radius;
+    border: $border-values;
+
   .container {
     margin-bottom: 1rem;
 
@@ -296,19 +303,28 @@ header .header {
   .weather__week {
     width: 50%;
 
+
+    @media (max-width: 416px) {
+      width: 80%;
+    }
+
     .weather__day {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
+    @media (max-width: 416px) {
+      flex-wrap: wrap;
+    }
   }
 }
 
 /*
- ** 6. Wheater
+ ** 6. Latest News
  */
 .latest-news {
-  padding: 2rem 2rem;
+  padding: 0 2rem 2rem;
 
   .latest-news__header {
     justify-content: space-between;
@@ -341,6 +357,16 @@ header .header {
       h3,
       p {
         margin-left: 1.5rem;
+      }
+
+      @media (max-width: 560px) {
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          margin-bottom: 1rem;
+          width: 70%;
+        }
       }
     }
   }

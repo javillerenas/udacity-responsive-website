@@ -24,7 +24,7 @@ body {
   font-family: Roboto;
   font-size: 12px;
   color: #424242;
-  background: linear-gradient(-45deg, #ee7752, #b721ff, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #ee7752, #6c7ae0, #23a6d5, #23d5ab);
   background-size: 4000% 400%;
   animation: Gradient 15s ease infinite;
 }
@@ -93,7 +93,7 @@ ul {
 }
 
 .wrap-container {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.26);
   border-radius: 5px;
 }
 
@@ -159,8 +159,8 @@ header .header .header__title {
 .top-nav .top-nav__item {
   flex: 1;
   text-align: center;
-  color: #616161;
-  font-size: calc(0.2rem + 1vw);
+  color: #458;
+  font-size: calc(0.2rem + 2vw);
   font-style: bold;
   padding: 1.5rem 0;
   text-decoration: none;
@@ -199,7 +199,7 @@ header .header .header__title {
 }
 .top-news .top-news__header {
   justify-content: space-between;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.8);
   font-weight: 300;
   line-height: 24px;
   font-size: calc(1rem + 0.7vw);
@@ -214,7 +214,7 @@ header .header .header__title {
   font-size: calc(1rem + 0.4vw);
 }
 .top-news .top-news__list .top-news__item {
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.8);
   padding: 1em 0;
   line-height: 19.2px;
   text-decoration: none;
@@ -262,6 +262,13 @@ header .header .header__title {
 /*
  ** 6. Wheater
  */
+.weather {
+  padding: 1rem;
+  margin: 2rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.26);
+  border-radius: 5px;
+  border: 1px solid rgba(200, 200, 200, 0.8);
+}
 .weather .container {
   margin-bottom: 1rem;
 }
@@ -282,17 +289,27 @@ header .header .header__title {
 .weather .weather__week {
   width: 50%;
 }
+@media (max-width: 416px) {
+  .weather .weather__week {
+    width: 80%;
+  }
+}
 .weather .weather__week .weather__day {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 416px) {
+  .weather .weather__week {
+    flex-wrap: wrap;
+  }
+}
 
 /*
- ** 6. Wheater
+ ** 6. Latest News
  */
 .latest-news {
-  padding: 2rem 2rem;
+  padding: 0 2rem 2rem;
 }
 .latest-news .latest-news__header {
   justify-content: space-between;
@@ -327,6 +344,16 @@ header .header .header__title {
 .latest-news .latest-news__body .latest-news__item h3,
 .latest-news .latest-news__body .latest-news__item p {
   margin-left: 1.5rem;
+}
+@media (max-width: 560px) {
+  .latest-news .latest-news__body .latest-news__item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .latest-news .latest-news__body .latest-news__item img {
+    margin-bottom: 1rem;
+    width: 70%;
+  }
 }
 
 /*
