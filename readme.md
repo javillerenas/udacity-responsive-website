@@ -6,7 +6,7 @@
     width=550px
   />
   <h1>Responsive Website!</h1>
-  <strong>Built with just HTML and CSS</strong>
+  <strong>Built with just HTML and CSS (SCSS)</strong>
 </div>
 <br/>
  <p align="center">
